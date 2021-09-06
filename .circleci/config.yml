@@ -22,6 +22,13 @@ jobs:
         name: print_world
         command:
           echo "world"
+ print_context_name:
+   docker: 
+      - image: circleci/node:13.8.0
+   steps:
+     - run:
+        command:
+         echo $MY_CONTEXT_NAME
 workflows:
   # Name the workflow "welcome"
   default:
@@ -30,5 +37,6 @@ workflows:
       - print_hello
       - print_world:
          requires: [print_hello]
+      - print_context_name
 #Thanks
 
