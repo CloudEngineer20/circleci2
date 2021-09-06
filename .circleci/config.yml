@@ -10,7 +10,6 @@ jobs:
    docker: 
       - image: circleci/node:13.8.0
    steps: 
-     - checkout
      - run:
         name: print_hello
         command:
@@ -19,7 +18,6 @@ print_world:
    docker: 
       - image: circleci/node:13.8.0
    steps: 
-     - Checkout
      - run:
         name: print_world
         command:
