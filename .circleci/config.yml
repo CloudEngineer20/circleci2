@@ -15,15 +15,15 @@ jobs:
         command:
           echo "hello world" > output.txt
      - persist_to_workspace:
-        root: /circleci/test
+        root: ~/ 
         paths:
-          - build/*
+          - output.txt
  print_output_file:
    docker: 
       - image: circleci/node:13.8.0
    steps: 
      - attach_workspace:
-        at: /circleci/test
+        at: ~/
      - run:
         name: output workspace
         command:
