@@ -3,15 +3,14 @@ version: 2.1
 # Use a package of configuration called an orb.
 commands:
   print_pipeline_id:
-    description: "A very simple command for demonstration purposes"
     steps:
-        - run: echo ${CIRCLE_WORKFLOW_ID}
+      - run: echo ${CIRCLE_WORKFLOW_ID}
 jobs:
- illustrate_commands:
-   docker: 
+  illustrate_commands:
+    docker: 
       - image: circleci/node:13.8.0
-   steps: 
-     - print_pipeline_id:
+    steps: 
+       - print_pipeline_id
 workflows:
   # Name the workflow "welcome"
   default:
