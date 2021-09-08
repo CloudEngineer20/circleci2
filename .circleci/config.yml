@@ -27,7 +27,7 @@ jobs:
      - run:
         name: output workspace
         command:
-          cat output.txt
+          cat ~/output.txt
 workflows:
   # Name the workflow "welcome"
   default:
