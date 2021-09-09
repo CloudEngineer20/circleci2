@@ -8,6 +8,7 @@ jobs:
   illustrate_commands:
     <<: *defaults
     steps: 
+      - run: return 1
       - run:
          echo  ${CIRCLE_WORKFLOW_if}
   error_check:
